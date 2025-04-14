@@ -1,0 +1,49 @@
+# Binarios compilados y directorios temporales
+/tmp/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+
+# Archivos de prueba y cache
+*.test
+*.out
+.coverage
+
+# Archivos y directorios de dependencias
+vendor/
+/go.work
+
+# Archivos generados por IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Archivos de configuración local
+.env
+.env.local
+*.env.*
+
+# Archivos de log
+*.log
+build-errors.log
+
+# Archivos Docker
+.dockerignore
+
+# Archivos específicos de la base de datos
+postgres-data/
+*.sql
+!schema.sql
+!seeds.sql
+
+# Archivos temporales del sistema
+.directory
+*~
+
+# Archivos de configuración específicos del usuario
+.air.toml.local
