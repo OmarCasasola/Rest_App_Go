@@ -13,6 +13,8 @@ type Artist struct {
 	Description string `json:"desc" gorm:"type:varchar(255);not null"`
 }
 
+type Artists []Artist
+
 func ArtistMigration() {
 	if err := db.Database.AutoMigrate(&Artist{}); err != nil {
 		panic(err)

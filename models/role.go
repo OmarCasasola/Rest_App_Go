@@ -11,6 +11,8 @@ type Role struct {
 	Name string `json:"name" gorm:"type:varchar(255);not null;unique"`
 }
 
+type Roles []Role
+
 func RoleMigration() {
 	if err := db.Database.AutoMigrate(&Role{}); err != nil {
 		panic(err)

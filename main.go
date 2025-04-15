@@ -12,4 +12,5 @@ func main() {
 	models.MemberMigration()
 	models.AlbumMigration()
 	models.SongMigration()
+
 }

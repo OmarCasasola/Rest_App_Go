@@ -14,6 +14,8 @@ type Song struct {
 	Album    Album  `json:"albums" gorm:"foreignKey:AlbumID;references:ID;constraint:OnUpdate:CASCADE,OnDelete:CASCADE;"`
 }
 
+type Songs []Song
+
 func SongMigration() {
 	if err := db.Database.AutoMigrate(&Song{}); err != nil {
 		panic(err)

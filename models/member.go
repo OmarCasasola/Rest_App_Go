@@ -17,6 +17,8 @@ type Member struct {
 	Role     Role   `json:"role" gorm:"foreignKey:RoleID;references:ID;constraint:OnUpdate:CASCADE,OnDelete:CASCADE;"`
 }
 
+type Members []Member
+
 func MemberMigration() {
 	if err := db.Database.AutoMigrate(&Member{}); err != nil {
 		panic(err)
